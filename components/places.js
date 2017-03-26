@@ -37,7 +37,26 @@ export class Places extends React.Component {
   render() {
     const { navigate } = this.props.navigation; 
     return (
-
+      <View style={{flex: 1, paddingTop: 22}}>
+        <ListView
+          dataSource={this.state.dataSource}
+          renderRow={(rowData, sectionID, rowID) => 
+            <TouchableOpacity
+              onPress = {() => {
+                console.log('being pressed');
+                Linking.openURL(`${locationData[rowID][1]}`);
+                }
+              }
+            >
+              <Image source={locationData[rowID][0]} style={styles.image} resizeMode='cover'>
+                <Text style={styles.text}>
+                  {rowData}
+                </Text>
+              </Image>
+            </TouchableOpacity>
+          }
+        />
+      </View>
     );
   }
 }
