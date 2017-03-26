@@ -34,8 +34,8 @@ export class Welcome extends React.Component {
               Explorer
             </Text>
           </View>
-          <View style={styles.lastWorkoutContainer}>
-            <Text style={styles.lastWorkoutTitle}>
+          <View style={styles.infoContainer}>
+            <Text style={styles.info}>
               Discover the wonders of the world in the palm of your hand
             </Text>
           </View>
@@ -74,12 +74,12 @@ const styles = StyleSheet.create({
     color: '#F3F3F3',
     textAlign: 'center'
   },
-  lastWorkoutContainer: {
+  infoContainer: {
     alignItems: 'center',
     backgroundColor: 'transparent',
     flex: 0.3
   },
-  lastWorkoutTitle: {
+  info: {
     fontSize: 30,
     alignItems: 'center',
     textAlign: 'center',
