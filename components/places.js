@@ -18,3 +18,26 @@ const onButtonPress = (id) => {
   });
   navigate('map', {location: this.state.location});
 }
+
+export class Places extends React.Component {
+  static navigationOptions = {
+    header: {
+      title: 'Explore'
+    }
+  };
+  constructor(props) {
+    super(props);
+    const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+    this.state = {
+      dataSource: ds.cloneWithRows([
+        'Taj Mahal', 'Machu Pichu', 'Petra', 'Great Wall of China', 'Christ Redeemer', 'Chichen Itza', 'The Colosseum'
+      ])
+    };
+  }
+  render() {
+    const { navigate } = this.props.navigation; 
+    return (
+
+    );
+  }
+}
