@@ -37,7 +37,7 @@ export class Places extends React.Component {
   render() {
     const { navigate } = this.props.navigation; 
     return (
-      <View style={{flex: 1, paddingTop: 22}}>
+      <View style={{flex: 1, paddingTop: 5, backgroundColor: 'black'}}>
         <ListView
           dataSource={this.state.dataSource}
           renderRow={(rowData, sectionID, rowID) => 
